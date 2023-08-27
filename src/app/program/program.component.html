@@ -1,0 +1,30 @@
+
+
+
+<div class="col-md-4 offset-md-4">
+<form action="">
+  <div class="form-control" [ngClass]="{'coche':mycheckbox}"><h2>{{Program.title}}</h2>
+  <input type="checkbox" name="mycheckbox" (click)="onCoche()"></div>
+</form>
+
+<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onSelect(index)">Update</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Votre program!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="user" id="in" placeholder="donnez votre program" [(ngModel)]="user">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="onUpdate(Program.id)">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-danger">Delete</button>
+</div>
+
